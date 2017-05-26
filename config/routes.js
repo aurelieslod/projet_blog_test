@@ -5,5 +5,6 @@ module.exports = function(app){
 	app.get('/', home.index);
 
 
-
+	var firstTest = require('../app/controllers/firstTest');
+	app.get('/firstTest', firstTest.index);
 };
