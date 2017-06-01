@@ -1,6 +1,11 @@
 extends ../layout
 
 block content
-  div.main
-    h1  #{title}
-    p If I can see this Text, it's because I'm a Warrior NodeJs begginer !
+  include ../header.jade
+  
+  section.home
+    article.logoPresentation
+      img(src='../img/logoBlogContours02.svg')
+      p Bienvenue sur le Blog du Dev'
+      button.button Voir les articles
+  

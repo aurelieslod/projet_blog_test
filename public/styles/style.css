@@ -1,8 +1,1 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+@font-face{font-family:"freFont";src:url('../fonts/Friedrichshain-Regular.otf')}@font-face{font-family:"geo";src:url('../fonts/Geomanist-Regular.otf')}.vertical-align{position:relative;top:50%;transform:translateY(-50%)}body{background-image:url('../img/background01.png');background-attachment:fixed;background-size:100%;background-color:white}.button{background-color:transparent;border:1px solid #F7CE3E;width:200px;height:50px;color:#F7CE3E;font-family:"geo"}.navbar-fixed{position:absolute !important}.navbar-fixed nav{background-color:transparent !important}.navbar-fixed nav .nav-wrapper ul li a{font-family:"geo";font-size:18px}.navbar-fixed nav .nav-wrapper .brand-logo{font-family:"freFont";margin-left:20px;color:#F7CE3E}.home{height:100vh}.home .logoPresentation{margin:auto;width:50%;border:3px solid #EAE4E3;height:700px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;top:50%;transform:translateY(-50%)}.home .logoPresentation img{height:400px}.home .logoPresentation p{color:#EAE4E3;font-family:'freFont';font-size:2em}.main{box-shadow:0 0 100px -42px rgba(0,0,0,0.5)}
