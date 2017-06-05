@@ -2,10 +2,35 @@
   nav
     .nav-wrapper
       a.brand-logo(href='#') Le blog du dev'
+      a.button-collapse(href='#', data-activates='mobile')
+        i.fa.fa-bars(aria-hidden='true')
+
       ul#nav-mobile.right.hide-on-med-and-down
         li
-          a(href='sass.html') Accueil
+          a(href='../firstTest') Accueil
         li
-          a(href='badges.html') Articles
+          a(href='../articles') Articles
         li
           a(href='collapsible.html') A propos
+        li
+          a(href='#modal1') 
+            i.fa.fa-power-off(aria-hidden='true')
+
+//Navbar mobile sidenav extract to .navbar-fixed because it's create conflicts   
+ul#mobile.side-nav
+  li
+    a(href='../firstTest') Accueil
+  li
+    a(href='../articles') Articles
+  li
+    a(href='collapsible.html') A propos
+        
+
+//Modal admin connection
+  
+#modal1.modal
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree

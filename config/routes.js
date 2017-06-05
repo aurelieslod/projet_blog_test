@@ -7,4 +7,7 @@ module.exports = function(app){
 
 	var firstTest = require('../app/controllers/firstTest');
 	app.get('/firstTest', firstTest.index);
+
+	var articles = require('../app/controllers/articles');
+	app.get('/articles', articles.index);
 };

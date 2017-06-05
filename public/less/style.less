@@ -1,60 +1,80 @@
 // out: ../styles/style.css, sourcemap: true, compress: true
 //
-
-@silver : #C5C1C0;
-@platinium : #EAE4E3;
-@richBlack : #0A1612;
-@metal : #1A2930;
-@sandstorm : #F7CE3E;
-@oliveBlack : #3F3F37;
-@denim : #1A2930;
-
+//Variables
+@silver: #C5C1C0;
+@platinium: #EAE4E3;
+@richBlack: #0A1612;
+@metal: #1A2930;
+@sandstorm: #F7CE3E;
+@oliveBlack: #3F3F37;
+@denim: #1A2930;
+//Fonts
 @font-face {
-  font-family : "freFont";
+  font-family: "freFont";
   src: url('../fonts/Friedrichshain-Regular.otf');
 }
-
 @font-face {
-  font-family : "geo";
+  font-family: "geo";
   src: url('../fonts/Geomanist-Regular.otf');
 }
-
-.vertical-align{
-  position: relative;
-  top : 50%;
-  transform: translateY(-50%);
-}
-
-
-body{
+//_________________________UTILS______________________________
+body {
   background-image: url('../img/background01.png');
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   background-color: white;
 }
 
-.button{
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button {
   background-color: transparent;
   border: 1px solid @sandstorm;
   width: 200px;
   height: 50px;
-  color: @sandstorm;
   font-family: "geo";
+
+  &:hover {
+    background-color: @sandstorm;
+
+    a {
+      color: black;
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+
+    a {
+      color: @sandstorm;
+    }
+  }
+
+  a {
+    color: @sandstorm;
+  }
 }
 //_____________________________Header_______________________________________
-.navbar-fixed{
+.navbar-fixed {
   position: absolute !important;
-  nav{
+
+  nav {
     background-color: transparent !important;
+    height: 64px;
+    top: 0;
 
-    .nav-wrapper{
-      ul li a{
-
+    .nav-wrapper {
+      ul li a {
         font-family: "geo";
         font-size: 18px;
         // letter-spacing: 2px;
       }
-      .brand-logo{
+
+      .brand-logo {
         font-family: "freFont";
         margin-left: 20px;
         color: @sandstorm;
@@ -62,35 +82,116 @@ body{
     }
   }
 }
-
-
-
-
 //_________________________Page d'accueil____________________________________
-.home{
+.home {
   height: 100vh;
-  .logoPresentation{
-    margin : auto;
-    width: 50%;
-    border: 3px solid @platinium;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .vertical-align;
-    img{
+
+  .logoPresentation {
+    @media screen {
+      margin: auto;
+      width: 90%;
+      border: 3px solid @platinium;
       height: 400px;
-    }
-    p{
-      color: @platinium;
-      font-family: 'freFont';
-      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .vertical-align;
+
+      img {
+        height: 200px;
+      }
+
+      p {
+        color: @platinium;
+        font-family: 'freFont';
+        font-size: 2em;
+      }
+      @media (min-width: 900px) {
+        width: 50%;
+        height: 700px;
+
+        img {
+          height: 400px;
+        }
+      }
     }
   }
 }
+//_________________________Articles____________________________________
+.articles {
+  margin-top: 100px; //because of navbar fixed
 
+  .article {
+    height: 270px;
 
-.main{
-  box-shadow: 0px 0px 100px -42px rgba(0, 0, 0, 0.5);
+    .resumeArticle {
+      width: 100%;
+      background-color: @platinium;
+      height: 200px;
+      padding-left: 0;
+      position: relative;
+
+      .titleArticle {
+        width: 100%;
+        height: 40px;
+        background-color: @sandstorm;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+
+        h6 {
+          font-family: 'geo';
+          font-weight: bold;
+          letter-spacing: 1px;
+
+          span {
+            padding-left: 20px;
+            font-style: italic;
+            font-weight: normal;
+          }
+        }
+      }
+      p{
+        margin-top: 50px;
+        margin-left: 10px;
+        font-family: 'geo';
+        text-align: justify;
+      }
+      .plus{
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        background-color: @sandstorm;
+        border-radius: 50%;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+          color: @denim;
+        }
+      }
+    }
+
+    .imageArticle {
+      display: none;
+    }
+    @media (min-width: 760px) {
+      .imageArticle {
+        display: block;
+        height: 200px;
+        background-color: @denim;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
