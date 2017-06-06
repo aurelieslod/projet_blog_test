@@ -35,7 +35,7 @@ body {
   background-color: transparent;
   border: 1px solid @sandstorm;
   width: 200px;
-  height: 50px;
+  height: 60px;
   font-family: "geo";
 
   &:hover {
@@ -59,6 +59,7 @@ body {
   }
 }
 //_____________________________Header_______________________________________
+//Navbar
 .navbar-fixed {
   position: absolute !important;
 
@@ -82,6 +83,24 @@ body {
     }
   }
 }
+
+//Modal admin connection
+
+#modalAdmin{
+  border-top: 10px solid @sandstorm;
+  border-bottom: 10px solid @sandstorm;
+  .modal-content{
+    background-color: @platinium;
+    h4{
+      font-family: 'freFont';
+    }
+  }
+  .modal-footer{
+    background-color: @platinium;
+  }
+}
+
+
 //_________________________Page d'accueil____________________________________
 .home {
   height: 100vh;
