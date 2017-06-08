@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  table.centered.bordered
+    thead.blue.lighten-2
+      th id
+      th firstname
+      th lastname
+      th email
+      th password
+      th Edit
+      th Delete
+    tbody
+    - for user in users
+      tr
+        td #{user.id}
+        td #{user.firstname}
+        td #{user.lastname}
+        td #{user.email}
+        td #{user.password}
+        td 
+          button.btn.waves-effect.blue.lighten-2 Edit
+        td
+          button.btn.waves-effect.red.lighten-2 Delete

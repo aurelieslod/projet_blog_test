@@ -11,6 +11,9 @@ module.exports = function(app){
 	var articles = require('../app/controllers/articles');
 	app.get('/articles', articles.index);
 
+	var users = require('../app/controllers/users');
+	app.get('/users', users.index);
+
 	app.get("/completeArticle", (req, res)=>{
 		res.render('completeArticle/index', {content : "hey !"})
 	})
