@@ -19,10 +19,11 @@ block content
         td #{user.email}
         td #{user.password}
         td 
-          a
+          a(href='/users_edit/'+ user.id)
             button.btn.waves-effect.blue.lighten-2 Edit
         td
-          button.btn.waves-effect.red.lighten-2 Delete
+          a(href='/user_remove/'+ user.id)
+            button.btn.waves-effect.red.lighten-2 Delete
           
   section.center-align
     a(href="/users_add")

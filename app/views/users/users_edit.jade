@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  .row
+    form.col.m6(method='post',action='/users_edit/'+user.id)
+      .row
+        .input-field
+          input(type='text', name='firstname', value="#{user.firstname}")
+          label(for='firstname') firstname
+      .row
+        .input-field
+          input(type='text', name='lastname', value="#{user.lastname}")
+          label(for='lastname') Lastname
+      .row
+        .input-field
+          input(type='text', name='email', value="#{user.email}")
+          label(for='email') Email
+      .row
+        .input-field
+          input(type='text', name='password', value="#{user.password}")
+          label(for='password') Password
+
+          input(type='submit',name='save', value='save').btn.waves-effect.blue.lighten-2
+          button.btn.waves-effect.red.lighten-2 Cancel
