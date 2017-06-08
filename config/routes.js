@@ -13,6 +13,6 @@ module.exports = function(app){
 	app.get('/users_edit/:id', users.users_edit);
 	app.post('/users_edit/:id', users.save_edit);
 	app.get('/user_remove/:id', users.users_remove);
-
+	app.post('/users_remove/:id', users.save_remove);
 
 };

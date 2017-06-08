@@ -63,5 +63,28 @@ exports.save_edit = function(req, res){
       res.redirect('/users');
     })
   })
-
   }
+
+  exports.users_remove = function(req, res){
+    var id = req.params.id;
+    Users.get(id, function(err, users){
+      if(err) throw new Error(err);
+      res.render('users/users_remove', {
+        title : 'remove user',
+        user : users
+      });
+    });
+  };
+
+
+  exports.save_remove = function(req, res){
+    var id = req.params.id;
+    Users.get(id, function (err, users) {
+    if(err) throw new Error(err);
+    users.remove(function (err) {
+        console.log("removed!");
+
+    });
+    res.redirect('/users');
+});
+    }

@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  table.centered.bordered
+    thead.blue.lighten-2
+      th id
+      th firstname
+      th lastname
+      th email
+      th password
+      th Delete
+    tbody
+      tr
+        td #{user.id}
+        td #{user.firstname}
+        td #{user.lastname}
+        td #{user.email}
+        td #{user.password}
+        td
+          form(method="post", action="/users_remove/"+user.id)
+            input(type="submit", name="submit", value="remove").btn.waves-effect.red.lighten-2
+          a(href="/users")
+            button.btn.waves-effect.red.lighten-2 Cancel
