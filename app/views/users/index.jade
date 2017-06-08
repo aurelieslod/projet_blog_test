@@ -19,6 +19,11 @@ block content
         td #{user.email}
         td #{user.password}
         td 
-          button.btn.waves-effect.blue.lighten-2 Edit
+          a
+            button.btn.waves-effect.blue.lighten-2 Edit
         td
           button.btn.waves-effect.red.lighten-2 Delete
+          
+  section.center-align
+    a(href="/users_add")
+      button.btn.waves-effect.blue.lighten-2 Add User
